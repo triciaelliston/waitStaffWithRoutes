@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="WSWRApp">
+<head>
+	<meta charset="UTF-8">
+	<!--<link rel="stylesheet" href="wswr-app.css" /> -->
+	<title>Waiter Earnings Calculator</title>
+</head>
+<body>
+	<header class="header">
+		<h1>Waitstaff Calculator</h1>
+	</header>
+
+	<a href="#/Home">Home</a>
+	<a href="#/NewMeal">New Meal</a>
+	<a href="#/MyEarnings">My Earnings</a><br><br>
+	
+	<div ng-view></div>
+
+	<script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="./bower_components/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="./wswr-app.js"></script>
+
+</body>
+</html>

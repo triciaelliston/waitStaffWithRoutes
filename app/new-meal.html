@@ -1,0 +1,29 @@
+<section class="mealDetails box col-md-6">
+		<div class="alert alert-danger" role="alert" ng-if="mealForm.$submitted && mealForm.base_meal_price.$error.required || mealForm.tax_rate.$error.required || mealForm.tip_percentage.$error.required" ng-show='show_error'>Please enter numbers in all fields before submitting.</div>
+		<div class="alert alert-danger" role="alert" ng-if="mealForm.$submitted && mealForm.base_meal_price.$error.number || mealForm.tax_rate.$error.number || mealForm.tip_percentage.$error.number">Please enter numbers only.</div>
+		<form name="mealForm" ng-submit='submit()' novalidate>
+			<h2>Enter the Meal Details</h2>
+			<label>
+              Base Meal Price: $
+              <input type="number" name="base_meal_price" ng-model="base_meal_price" required><br>
+            </label>
+            <label>
+              Tax Rate: %
+              <input type="number" name="tax_rate" ng-model="tax_rate" required><br>
+            </label>
+            <label>
+              Tip Percentage: %
+              <input type="number" name="tip_percentage" ng-model="tip_percentage" required><br><br>
+            </label>
+            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+            <button ng-click="cancel()" class="btn btn-default" type="button">Cancel</button>
+		</form>
+	</section>
+	<section class="results col-md-6">
+		<div class="charges box">
+			<h2>Customer Charges</h2>
+			<p>Subtotal: {{ cust_sub_total | currency }}</p>
+			<p>Tip: {{ cust_tip | currency }}</p>
+			<p>Total: {{ cust_total | currency }}</p>
+		</div>
+	</section>

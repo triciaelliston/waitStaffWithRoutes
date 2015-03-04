@@ -1,0 +1,9 @@
+<section class="results col-md-6">
+	<div class="earnings box">
+		<h2>My Earnings Info</h2>
+		<p>Tip Total: {{ tip_total | currency }}</p>
+		<p>Meal Count: {{ meal_count }}</p>
+		<p>Average Tip Per Meal: {{ avg_tip | currency }}</p>
+	</div>
+	<button ng-click="reset()" class="btn btn-default reset">Reset</button>
+</section>
