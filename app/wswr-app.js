@@ -1,4 +1,4 @@
-angular.module('WSWRApp', ['ngRoute', 'ngAnimate'])
+angular.module('WSWRApp', ['ngRoute'])
 	.value('earnings', { tipTotal: 0, mealCount: 0, avgTip: 0 } )
 
 	.config(function($routeProvider) {
@@ -37,9 +37,13 @@ angular.module('WSWRApp', ['ngRoute', 'ngAnimate'])
 		$scope.mealCount = 0;
 		$scope.avgTip = 0;
 		$scope.showError = false;
+		console.log("Inside NewMealCtrl");
+		console.log($scope.showError);
 
 		$scope.submit = function() {
+			console.log("Inside submit");
 			$scope.showError = true;
+			console.log($scope.showError);
 			if ($scope.mealForm.$valid) {
 				console.log("Inside if mealForm valid");
 				$scope.custSubTotal = $scope.baseMealPrice + ($scope.baseMealPrice * $scope.taxRate/100);
@@ -62,6 +66,7 @@ angular.module('WSWRApp', ['ngRoute', 'ngAnimate'])
 			$scope.taxRate = 0;
 			$scope.tipPercentage = 0;
 			$scope.showError = false;
+			console.log($scope.showError);
 		};
 
 		//$scope.displayEarnings = function() {

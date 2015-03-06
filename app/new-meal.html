@@ -1,6 +1,7 @@
 <section class="mealDetails box">
-		<div class="alert alert-danger" role="alert" ng-if="mealForm.$submitted && mealForm.base_meal_price.$error.required || mealForm.tax_rate.$error.required || mealForm.tip_percentage.$error.required" ng-show='show_error'>Please enter numbers in all fields before submitting.</div>
+		<div class="alert alert-danger" role="alert" ng-if="mealForm.$submitted && mealForm.base_meal_price.$error.required || mealForm.tax_rate.$error.required || mealForm.tip_percentage.$error.required" ng-show='showError'>Please enter numbers in all fields before submitting.</div>
 		<div class="alert alert-danger" role="alert" ng-if="mealForm.$submitted && mealForm.base_meal_price.$error.number || mealForm.tax_rate.$error.number || mealForm.tip_percentage.$error.number">Please enter numbers only.</div>
+
 		<form name="mealForm" ng-submit='submit()' novalidate>
 			<h2>Enter the Meal Details</h2>
 			<label>
