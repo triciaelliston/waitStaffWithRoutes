@@ -12,7 +12,7 @@ angular.module('WSWRApp', ['ngRoute'])
 			templateUrl : './my-earnings.html',
 			controller : 'MyEarningsCtrl'
 		}).when('/error', {
-			template : '<p>Error Page Not Found</p'
+			templateUrl : '<p>Error Page Not Found</p>'
 		}).otherwise( {
 			redirectTo : '/Home'
 		});
