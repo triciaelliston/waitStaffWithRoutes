@@ -1,8 +1,12 @@
 <section class="mealDetails box">
-		<div class="alert alert-danger" role="alert" ng-if="mealForm.$submitted && mealForm.base_meal_price.$error.required || mealForm.tax_rate.$error.required || mealForm.tip_percentage.$error.required" ng-show='showError'>Please enter numbers in all fields before submitting.</div>
+		<!--<div class="alert alert-danger" role="alert" ng-if="mealForm.$submitted && mealForm.base_meal_price.$error.required || mealForm.tax_rate.$error.required || mealForm.tip_percentage.$error.required" ng-show='showError'>Please enter numbers in all fields before submitting.</div>
 		<div class="alert alert-danger" role="alert" ng-if="mealForm.$submitted && mealForm.base_meal_price.$error.number || mealForm.tax_rate.$error.number || mealForm.tip_percentage.$error.number">Please enter numbers only.</div>
+		-->
+		
+		<!--<form name="mealForm" ng-submit='submit()' novalidate> -->
+		<form name="mealForm" novalidate>
 
-		<form name="mealForm" ng-submit='submit()' novalidate>
+	
 			<h2>Enter the Meal Details</h2>
 			<label>
               Base Meal Price: $
@@ -16,8 +20,12 @@
               Tip Percentage: %
               <input type="number" name="tipPercentage" ng-model="tipPercentage" required><br><br>
             </label>
-            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-            <button ng-click="cancel()" class="btn btn-default" type="button">Cancel</button>
+            <!--<button type="submit" name="submit" class="btn btn-primary">Submit</button> -->
+            <button ng-click="submit()" class="btn btn-default" type="buttom">Submit</button>
+            <button ng-click="cancel()" class="btn btn-default" type="button">Cancel</button><br>
+
+            <div class="warning" ng-if="showError" >Please enter numbers in all fields before submitting.</div>
+
 		</form>
 	</section>
 	<section class="results">
